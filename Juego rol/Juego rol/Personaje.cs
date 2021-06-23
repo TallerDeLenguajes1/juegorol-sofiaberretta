@@ -23,7 +23,7 @@ namespace Juego_rol
     }
 
     */
-    class Personaje
+    public class Personaje
     {
         //Datos
         private tipoDePersonaje tipo;

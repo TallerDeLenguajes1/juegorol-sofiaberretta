@@ -30,3 +30,4 @@ D:\Facultad\2021\Taller de Lenguajes I\juegorol-sofiaberretta\Juego rol\Juego ro
 D:\Facultad\2021\Taller de Lenguajes I\juegorol-sofiaberretta\Juego rol\Juego rol\bin\Debug\netcoreapp3.1\Juego rol.dll
 D:\Facultad\2021\Taller de Lenguajes I\juegorol-sofiaberretta\Juego rol\Juego rol\bin\Debug\netcoreapp3.1\Juego rol.pdb
 D:\Facultad\2021\Taller de Lenguajes I\juegorol-sofiaberretta\Juego rol\Juego rol\obj\Debug\netcoreapp3.1\Juego rol.genruntimeconfig.cache
+D:\Facultad\2021\Taller de Lenguajes I\juegorol-sofiaberretta\Juego rol\Juego rol\obj\Debug\netcoreapp3.1\Juego_rol.Ventana_mostrador.resources

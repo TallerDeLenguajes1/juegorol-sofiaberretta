@@ -24,6 +24,8 @@ namespace Juego_rol
             Personaje nuevoPersonaje = new Personaje();
             crearPersonaje(nuevoPersonaje);
             listaPersonajes.Add(nuevoPersonaje);
+
+            mostrarPersonajeCreado(nuevoPersonaje);
             //ToDo: hacer que muestre el personaje despues de crearlo
         }
 
@@ -42,6 +44,14 @@ namespace Juego_rol
             nuevoPersonaje.Nivel = 1;
         }
 
+        private void mostrarPersonajeCreado(Personaje personajeCreado)
+        {
+            Ventana_mostrador ventanaVistaPersonaje = new Ventana_mostrador(personajeCreado);
+            ventanaVistaPersonaje.Show();
+        }
+
+
+        //------------------Personajes random----------------------------
         private void btRellenarRandom_Click(object sender, EventArgs e)
         {
             crearPersonajeRandom();
