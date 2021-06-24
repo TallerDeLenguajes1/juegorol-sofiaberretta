@@ -50,6 +50,9 @@ namespace Juego_rol
             this.lblApodoIzq = new System.Windows.Forms.Label();
             this.lblVidaIzq = new System.Windows.Forms.Label();
             this.lblVidaDer = new System.Windows.Forms.Label();
+            this.lblResultadoIzq = new System.Windows.Forms.Label();
+            this.lblResultadoDer = new System.Windows.Forms.Label();
+            this.botonSiguiente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imagenVS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonajeDer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonajeIzq)).BeginInit();
@@ -69,7 +72,7 @@ namespace Juego_rol
             // pbPersonajeDer
             // 
             this.pbPersonajeDer.BackColor = System.Drawing.Color.Transparent;
-            this.pbPersonajeDer.Location = new System.Drawing.Point(536, 31);
+            this.pbPersonajeDer.Location = new System.Drawing.Point(552, 31);
             this.pbPersonajeDer.Name = "pbPersonajeDer";
             this.pbPersonajeDer.Size = new System.Drawing.Size(143, 299);
             this.pbPersonajeDer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -79,7 +82,7 @@ namespace Juego_rol
             // pbPersonajeIzq
             // 
             this.pbPersonajeIzq.BackColor = System.Drawing.Color.Transparent;
-            this.pbPersonajeIzq.Location = new System.Drawing.Point(33, 31);
+            this.pbPersonajeIzq.Location = new System.Drawing.Point(14, 31);
             this.pbPersonajeIzq.Name = "pbPersonajeIzq";
             this.pbPersonajeIzq.Size = new System.Drawing.Size(143, 299);
             this.pbPersonajeIzq.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -93,7 +96,7 @@ namespace Juego_rol
             this.botonPelea.ForeColor = System.Drawing.Color.DarkRed;
             this.botonPelea.Location = new System.Drawing.Point(307, 187);
             this.botonPelea.Name = "botonPelea";
-            this.botonPelea.Size = new System.Drawing.Size(101, 46);
+            this.botonPelea.Size = new System.Drawing.Size(108, 46);
             this.botonPelea.TabIndex = 4;
             this.botonPelea.Text = "Pelear!";
             this.botonPelea.UseVisualStyleBackColor = false;
@@ -110,6 +113,7 @@ namespace Juego_rol
             this.btnAtaqueIzq.TabIndex = 5;
             this.btnAtaqueIzq.Text = "Atacar";
             this.btnAtaqueIzq.UseVisualStyleBackColor = false;
+            this.btnAtaqueIzq.Click += new System.EventHandler(this.btnAtaqueIzq_Click);
             // 
             // btnAtaqueDer
             // 
@@ -122,16 +126,17 @@ namespace Juego_rol
             this.btnAtaqueDer.TabIndex = 6;
             this.btnAtaqueDer.Text = "Atacar";
             this.btnAtaqueDer.UseVisualStyleBackColor = false;
+            this.btnAtaqueDer.Click += new System.EventHandler(this.btnAtaqueDer_Click);
             // 
             // lblNombreIzq
             // 
             this.lblNombreIzq.AutoSize = true;
             this.lblNombreIzq.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombreIzq.Font = new System.Drawing.Font("Euphorigenic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNombreIzq.Font = new System.Drawing.Font("Euphorigenic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblNombreIzq.ForeColor = System.Drawing.Color.Orange;
             this.lblNombreIzq.Location = new System.Drawing.Point(33, 9);
             this.lblNombreIzq.Name = "lblNombreIzq";
-            this.lblNombreIzq.Size = new System.Drawing.Size(45, 24);
+            this.lblNombreIzq.Size = new System.Drawing.Size(60, 32);
             this.lblNombreIzq.TabIndex = 7;
             this.lblNombreIzq.Text = "label1";
             // 
@@ -139,11 +144,11 @@ namespace Juego_rol
             // 
             this.lblNombreDer.AutoSize = true;
             this.lblNombreDer.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombreDer.Font = new System.Drawing.Font("Euphorigenic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNombreDer.Font = new System.Drawing.Font("Euphorigenic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblNombreDer.ForeColor = System.Drawing.Color.Orange;
-            this.lblNombreDer.Location = new System.Drawing.Point(536, 9);
+            this.lblNombreDer.Location = new System.Drawing.Point(506, 9);
             this.lblNombreDer.Name = "lblNombreDer";
-            this.lblNombreDer.Size = new System.Drawing.Size(48, 24);
+            this.lblNombreDer.Size = new System.Drawing.Size(64, 32);
             this.lblNombreDer.TabIndex = 8;
             this.lblNombreDer.Text = "label2";
             // 
@@ -239,10 +244,11 @@ namespace Juego_rol
             // 
             this.lblApodoDer.AutoSize = true;
             this.lblApodoDer.BackColor = System.Drawing.Color.Transparent;
+            this.lblApodoDer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblApodoDer.ForeColor = System.Drawing.Color.Orange;
-            this.lblApodoDer.Location = new System.Drawing.Point(618, 14);
+            this.lblApodoDer.Location = new System.Drawing.Point(601, 15);
             this.lblApodoDer.Name = "lblApodoDer";
-            this.lblApodoDer.Size = new System.Drawing.Size(38, 15);
+            this.lblApodoDer.Size = new System.Drawing.Size(52, 21);
             this.lblApodoDer.TabIndex = 18;
             this.lblApodoDer.Text = "label1";
             // 
@@ -250,10 +256,11 @@ namespace Juego_rol
             // 
             this.lblApodoIzq.AutoSize = true;
             this.lblApodoIzq.BackColor = System.Drawing.Color.Transparent;
+            this.lblApodoIzq.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblApodoIzq.ForeColor = System.Drawing.Color.Orange;
-            this.lblApodoIzq.Location = new System.Drawing.Point(110, 14);
+            this.lblApodoIzq.Location = new System.Drawing.Point(138, 14);
             this.lblApodoIzq.Name = "lblApodoIzq";
-            this.lblApodoIzq.Size = new System.Drawing.Size(38, 15);
+            this.lblApodoIzq.Size = new System.Drawing.Size(52, 21);
             this.lblApodoIzq.TabIndex = 17;
             this.lblApodoIzq.Text = "label2";
             // 
@@ -261,10 +268,11 @@ namespace Juego_rol
             // 
             this.lblVidaIzq.AutoSize = true;
             this.lblVidaIzq.BackColor = System.Drawing.Color.Transparent;
+            this.lblVidaIzq.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblVidaIzq.ForeColor = System.Drawing.Color.Red;
-            this.lblVidaIzq.Location = new System.Drawing.Point(233, 256);
+            this.lblVidaIzq.Location = new System.Drawing.Point(216, 251);
             this.lblVidaIzq.Name = "lblVidaIzq";
-            this.lblVidaIzq.Size = new System.Drawing.Size(38, 15);
+            this.lblVidaIzq.Size = new System.Drawing.Size(78, 32);
             this.lblVidaIzq.TabIndex = 19;
             this.lblVidaIzq.Text = "label1";
             // 
@@ -272,12 +280,48 @@ namespace Juego_rol
             // 
             this.lblVidaDer.AutoSize = true;
             this.lblVidaDer.BackColor = System.Drawing.Color.Transparent;
+            this.lblVidaDer.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblVidaDer.ForeColor = System.Drawing.Color.Red;
-            this.lblVidaDer.Location = new System.Drawing.Point(460, 256);
+            this.lblVidaDer.Location = new System.Drawing.Point(440, 251);
             this.lblVidaDer.Name = "lblVidaDer";
-            this.lblVidaDer.Size = new System.Drawing.Size(38, 15);
+            this.lblVidaDer.Size = new System.Drawing.Size(78, 32);
             this.lblVidaDer.TabIndex = 20;
             this.lblVidaDer.Text = "label2";
+            // 
+            // lblResultadoIzq
+            // 
+            this.lblResultadoIzq.AutoSize = true;
+            this.lblResultadoIzq.BackColor = System.Drawing.Color.Transparent;
+            this.lblResultadoIzq.Font = new System.Drawing.Font("Another Danger - Demo", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblResultadoIzq.ForeColor = System.Drawing.Color.Red;
+            this.lblResultadoIzq.Location = new System.Drawing.Point(160, 36);
+            this.lblResultadoIzq.Name = "lblResultadoIzq";
+            this.lblResultadoIzq.Size = new System.Drawing.Size(112, 60);
+            this.lblResultadoIzq.TabIndex = 21;
+            this.lblResultadoIzq.Text = "label1";
+            // 
+            // lblResultadoDer
+            // 
+            this.lblResultadoDer.AutoSize = true;
+            this.lblResultadoDer.BackColor = System.Drawing.Color.Transparent;
+            this.lblResultadoDer.Font = new System.Drawing.Font("Another Danger - Demo", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblResultadoDer.ForeColor = System.Drawing.Color.Red;
+            this.lblResultadoDer.Location = new System.Drawing.Point(415, 36);
+            this.lblResultadoDer.Name = "lblResultadoDer";
+            this.lblResultadoDer.Size = new System.Drawing.Size(119, 60);
+            this.lblResultadoDer.TabIndex = 22;
+            this.lblResultadoDer.Text = "label2";
+            // 
+            // botonSiguiente
+            // 
+            this.botonSiguiente.BackColor = System.Drawing.Color.Lavender;
+            this.botonSiguiente.Location = new System.Drawing.Point(307, 331);
+            this.botonSiguiente.Name = "botonSiguiente";
+            this.botonSiguiente.Size = new System.Drawing.Size(108, 40);
+            this.botonSiguiente.TabIndex = 23;
+            this.botonSiguiente.Text = "Batalla Siguiente";
+            this.botonSiguiente.UseVisualStyleBackColor = false;
+            this.botonSiguiente.Click += new System.EventHandler(this.botonSiguiente_Click);
             // 
             // Ventana_batallas
             // 
@@ -285,6 +329,9 @@ namespace Juego_rol
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(712, 383);
+            this.Controls.Add(this.botonSiguiente);
+            this.Controls.Add(this.lblResultadoDer);
+            this.Controls.Add(this.lblResultadoIzq);
             this.Controls.Add(this.lblVidaDer);
             this.Controls.Add(this.lblVidaIzq);
             this.Controls.Add(this.lblApodoDer);
@@ -338,5 +385,8 @@ namespace Juego_rol
         private System.Windows.Forms.Label lblApodoIzq;
         private System.Windows.Forms.Label lblVidaIzq;
         private System.Windows.Forms.Label lblVidaDer;
+        private System.Windows.Forms.Label lblResultadoIzq;
+        private System.Windows.Forms.Label lblResultadoDer;
+        private System.Windows.Forms.Button botonSiguiente;
     }
 }
