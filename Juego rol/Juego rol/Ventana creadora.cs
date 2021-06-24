@@ -13,7 +13,7 @@ namespace Juego_rol
     public partial class formCrearPersonaje : Form
     {
         static Random random = new Random();
-        List<Personaje> listaPersonajes = new List<Personaje>();
+        public static List<Personaje> listaPersonajes = new List<Personaje>();
         public formCrearPersonaje()
         {
             InitializeComponent();
@@ -21,12 +21,20 @@ namespace Juego_rol
 
         private void btCrearPersonaje_Click(object sender, EventArgs e)
         {
-            Personaje nuevoPersonaje = new Personaje();
-            crearPersonaje(nuevoPersonaje);
-            listaPersonajes.Add(nuevoPersonaje);
+            if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApodo.Text))
+            {
+                MessageBox.Show("Faltan rellenar datos.", "ERROR");
+            }
+            else
+            {
+                Personaje nuevoPersonaje = new Personaje();
+                crearPersonaje(nuevoPersonaje);
+                listaPersonajes.Add(nuevoPersonaje);
 
-            mostrarPersonajeCreado(nuevoPersonaje);
-            //ToDo: hacer que muestre el personaje despues de crearlo
+                mostrarPersonajeCreado(nuevoPersonaje);
+                limpiarDatos();
+            }
+            
         }
 
         private void crearPersonaje(Personaje nuevoPersonaje)
@@ -37,10 +45,10 @@ namespace Juego_rol
             nuevoPersonaje.FechaNac = dTPFechaNac.Value;
             nuevoPersonaje.Edad = calcularEdad(nuevoPersonaje.FechaNac);
 
-            nuevoPersonaje.Velocidad = valoresRandom();
-            nuevoPersonaje.Destreza = random.Next(0, 5) + 1;
-            nuevoPersonaje.Fuerza = valoresRandom();
-            nuevoPersonaje.Armadura = valoresRandom();
+            nuevoPersonaje.Velocidad = GenerarValoresRandom(0, 10);
+            nuevoPersonaje.Destreza = GenerarValoresRandom(0, 5);
+            nuevoPersonaje.Fuerza = GenerarValoresRandom(0, 10);
+            nuevoPersonaje.Armadura = GenerarValoresRandom(0, 10);
             nuevoPersonaje.Nivel = 1;
         }
 
@@ -59,28 +67,28 @@ namespace Juego_rol
 
         private void crearPersonajeRandom()
         {
-            txtNombre.Text = nombreRandom();
-            txtApodo.Text = apodoRandom();
-            comboBoxTipo.SelectedItem = tipoRandom();
-            dTPFechaNac.Value = fechaRandom();
+            txtNombre.Text = GenerarNombreRandom();
+            txtApodo.Text = GenerarApodoRandom();
+            comboBoxTipo.SelectedItem = GenerarTipoRandom();
+            dTPFechaNac.Value = GenerarFechaRandom();
 
         }
 
-        private string nombreRandom()
+        private string GenerarNombreRandom()
         {
             string[] nombres = { "Gandalf", "Legolas", "Gollum", "Gimli", "Galadriel", "Samsagaz", "Arwen", "Morgana" };
             int numNombre = random.Next(nombres.Length);
             return nombres[numNombre];
         }
 
-        private string apodoRandom()
+        private string GenerarApodoRandom()
         {
             string[] apodos = { "El fuerte", "El rapido", "La poderosa", "La increible", "El mejor", "La inigualable", "El fortachon", "El imparable", "La bestia" };
             int numApodo = random.Next(apodos.Length);
             return apodos[numApodo];
         }
 
-        private string tipoRandom()
+        private string GenerarTipoRandom()
         {
 
             int num = random.Next(5);
@@ -108,7 +116,7 @@ namespace Juego_rol
             return tipo;
         }
 
-        private DateTime fechaRandom()
+        private DateTime GenerarFechaRandom()
         {
             DateTime inicio = new DateTime(1753, 1, 1);
             int range = (DateTime.Today - inicio).Days;
@@ -120,11 +128,17 @@ namespace Juego_rol
             return DateTime.Today.Year - fechaNacimiento.Year;
         }
 
-        private int valoresRandom()
+        private int GenerarValoresRandom(int minimo, int maximo)
         {
-            return random.Next(0, 10) + 1;
+            return random.Next(minimo, maximo) + 1;
         }
 
+        public void limpiarDatos()
+        {
+            txtNombre.Text = "";
+            txtApodo.Text = "";
+            dTPFechaNac.Value = DateTime.Now;
+        }
         
     }
 }

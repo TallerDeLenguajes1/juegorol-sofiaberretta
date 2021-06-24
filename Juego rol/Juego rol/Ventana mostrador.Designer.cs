@@ -61,11 +61,11 @@ namespace Juego_rol
             // 
             this.lblNombrePersonaje.AutoSize = true;
             this.lblNombrePersonaje.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombrePersonaje.Font = new System.Drawing.Font("Euphorigenic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNombrePersonaje.ForeColor = System.Drawing.Color.Orange;
-            this.lblNombrePersonaje.Location = new System.Drawing.Point(226, 28);
+            this.lblNombrePersonaje.Font = new System.Drawing.Font("Euphorigenic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNombrePersonaje.ForeColor = System.Drawing.Color.Thistle;
+            this.lblNombrePersonaje.Location = new System.Drawing.Point(226, 32);
             this.lblNombrePersonaje.Name = "lblNombrePersonaje";
-            this.lblNombrePersonaje.Size = new System.Drawing.Size(26, 41);
+            this.lblNombrePersonaje.Size = new System.Drawing.Size(35, 56);
             this.lblNombrePersonaje.TabIndex = 0;
             this.lblNombrePersonaje.Text = " ";
             // 
@@ -125,6 +125,7 @@ namespace Juego_rol
             this.button1.TabIndex = 6;
             this.button1.Text = "A pelear!";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblSalud
             // 
@@ -158,9 +159,9 @@ namespace Juego_rol
             this.lblDestreza.ForeColor = System.Drawing.Color.Orange;
             this.lblDestreza.Location = new System.Drawing.Point(456, 238);
             this.lblDestreza.Name = "lblDestreza";
-            this.lblDestreza.Size = new System.Drawing.Size(98, 26);
+            this.lblDestreza.Size = new System.Drawing.Size(100, 26);
             this.lblDestreza.TabIndex = 10;
-            this.lblDestreza.Text = "Destresa:";
+            this.lblDestreza.Text = "Destreza:";
             // 
             // lblFuerza
             // 
@@ -340,6 +341,7 @@ namespace Juego_rol
             this.button2.TabIndex = 25;
             this.button2.Text = "Crear otro personaje";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Ventana_mostrador
             // 

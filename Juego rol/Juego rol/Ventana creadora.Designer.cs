@@ -172,7 +172,7 @@ namespace Juego_rol
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(344, 341);
+            this.ClientSize = new System.Drawing.Size(341, 342);
             this.Controls.Add(this.comboBoxTipo);
             this.Controls.Add(this.txtApodo);
             this.Controls.Add(this.txtNombre);

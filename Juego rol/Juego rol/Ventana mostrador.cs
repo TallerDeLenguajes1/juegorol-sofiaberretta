@@ -32,6 +32,12 @@ namespace Juego_rol
             label9.Text = Convert.ToString(personaje.Nivel);
             label10.Text = Convert.ToString(personaje.Fuerza);
 
+            mostrarImagenTipo(personaje);
+            
+        }
+
+        public void mostrarImagenTipo(Personaje personaje)
+        {
             switch (personaje.Tipo)
             {
                 case tipoDePersonaje.Elfo:
@@ -42,7 +48,7 @@ namespace Juego_rol
                     break;
                 case tipoDePersonaje.Humano:
                     int personas = random.Next(0, 2);
-                    if(personas == 1)
+                    if (personas == 1)
                     {
                         pbPersonaje.Image = Image.FromFile("Humano.png");
                     }
@@ -58,6 +64,26 @@ namespace Juego_rol
                     pbPersonaje.Image = Image.FromFile("orco.png");
                     break;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(formCrearPersonaje.listaPersonajes.Count < 2)
+            {
+                MessageBox.Show("Debe tener al menos 2 personajes creados.");
+            }
+            else
+            {
+                Ventana_batallas ventanaBatallaNueva = new Ventana_batallas();
+                ventanaBatallaNueva.Show();
+            }
+
+            Close();
         }
     }
 }
