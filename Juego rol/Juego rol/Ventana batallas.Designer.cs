@@ -53,6 +53,8 @@ namespace Juego_rol
             this.lblResultadoIzq = new System.Windows.Forms.Label();
             this.lblResultadoDer = new System.Windows.Forms.Label();
             this.botonSiguiente = new System.Windows.Forms.Button();
+            this.lblNivelDer = new System.Windows.Forms.Label();
+            this.lblNivelIzq = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imagenVS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonajeDer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonajeIzq)).BeginInit();
@@ -315,13 +317,37 @@ namespace Juego_rol
             // botonSiguiente
             // 
             this.botonSiguiente.BackColor = System.Drawing.Color.Lavender;
-            this.botonSiguiente.Location = new System.Drawing.Point(307, 331);
+            this.botonSiguiente.Font = new System.Drawing.Font("Gloucester MT Extra Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.botonSiguiente.ForeColor = System.Drawing.Color.DarkRed;
+            this.botonSiguiente.Location = new System.Drawing.Point(297, 331);
             this.botonSiguiente.Name = "botonSiguiente";
-            this.botonSiguiente.Size = new System.Drawing.Size(108, 40);
+            this.botonSiguiente.Size = new System.Drawing.Size(118, 40);
             this.botonSiguiente.TabIndex = 23;
             this.botonSiguiente.Text = "Batalla Siguiente";
             this.botonSiguiente.UseVisualStyleBackColor = false;
             this.botonSiguiente.Click += new System.EventHandler(this.botonSiguiente_Click);
+            // 
+            // lblNivelDer
+            // 
+            this.lblNivelDer.AutoSize = true;
+            this.lblNivelDer.BackColor = System.Drawing.Color.Transparent;
+            this.lblNivelDer.ForeColor = System.Drawing.Color.Orange;
+            this.lblNivelDer.Location = new System.Drawing.Point(460, 236);
+            this.lblNivelDer.Name = "lblNivelDer";
+            this.lblNivelDer.Size = new System.Drawing.Size(44, 15);
+            this.lblNivelDer.TabIndex = 24;
+            this.lblNivelDer.Text = "label12";
+            // 
+            // lblNivelIzq
+            // 
+            this.lblNivelIzq.AutoSize = true;
+            this.lblNivelIzq.BackColor = System.Drawing.Color.Transparent;
+            this.lblNivelIzq.ForeColor = System.Drawing.Color.Orange;
+            this.lblNivelIzq.Location = new System.Drawing.Point(234, 236);
+            this.lblNivelIzq.Name = "lblNivelIzq";
+            this.lblNivelIzq.Size = new System.Drawing.Size(44, 15);
+            this.lblNivelIzq.TabIndex = 25;
+            this.lblNivelIzq.Text = "label11";
             // 
             // Ventana_batallas
             // 
@@ -329,6 +355,8 @@ namespace Juego_rol
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(712, 383);
+            this.Controls.Add(this.lblNivelIzq);
+            this.Controls.Add(this.lblNivelDer);
             this.Controls.Add(this.botonSiguiente);
             this.Controls.Add(this.lblResultadoDer);
             this.Controls.Add(this.lblResultadoIzq);
@@ -354,7 +382,7 @@ namespace Juego_rol
             this.Controls.Add(this.imagenVS);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Ventana_batallas";
-            this.Text = "Ventana_batallas";
+            this.Text = "Batalla";
             ((System.ComponentModel.ISupportInitialize)(this.imagenVS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonajeDer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonajeIzq)).EndInit();
@@ -388,5 +416,7 @@ namespace Juego_rol
         private System.Windows.Forms.Label lblResultadoIzq;
         private System.Windows.Forms.Label lblResultadoDer;
         private System.Windows.Forms.Button botonSiguiente;
+        private System.Windows.Forms.Label lblNivelDer;
+        private System.Windows.Forms.Label lblNivelIzq;
     }
 }

@@ -5,6 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
+using System.Net;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Juego_rol
 {
@@ -14,6 +18,7 @@ namespace Juego_rol
         public Ventana_mostrador(Personaje personaje)
         {
             InitializeComponent();
+            //inicializarComboBox();
             mostrarPersonaje(personaje);
         }
 
@@ -79,11 +84,97 @@ namespace Juego_rol
             }
             else
             {
+                //Ventana_batallas.cambiarFondo(comboBoxProvincias.SelectedItem.ToString());
                 Ventana_batallas ventanaBatallaNueva = new Ventana_batallas();
                 ventanaBatallaNueva.Show();
             }
 
             Close();
         }
+
+        /*
+        -------------------------parte de API----------------------------------
+
+        private void inicializarComboBox()
+        {
+            ProvinciasArgentina listaProvincias;
+            listaProvincias = ObtieneProvincias();
+
+            foreach (Provincia Prov in listaProvincias.Provincias)
+            {
+                comboBoxProvincias.Items.Add(Prov.Nombre);
+            }
+
+            comboBoxProvincias.Items.Add("Predeterminado");
+
+        }
+
+
+        private static ProvinciasArgentina ObtieneProvincias()
+        {
+            var url = $"https://apis.datos.gob.ar/georef/api/provincias?campos=id,nombre";
+            var request = (HttpWebRequest)WebRequest.Create(url);
+            request.Method = "GET";
+            request.ContentType = "application/json";
+            request.Accept = "application/json";
+            ProvinciasArgentina ProvinciasArg;
+            ProvinciasArg = null;
+            try
+            {
+                using (WebResponse response = request.GetResponse())
+                {
+                    using (Stream strReader = response.GetResponseStream())
+                    {
+                        if (strReader != null)
+                        {
+                            using (StreamReader objReader = new StreamReader(strReader))
+                            {
+                                string responseBody = objReader.ReadToEnd();
+                                ProvinciasArg = JsonSerializer.Deserialize<ProvinciasArgentina>(responseBody);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (WebException)
+            {
+                // Handle error
+            }
+            return ProvinciasArg;
+        }
+
+        // Root myDeserializedClass = JsonSerializer.Deserialize<Root>(myJsonResponse);
+        public class Parametros
+        {
+            [JsonPropertyName("campos")]
+            public List<string> Campos { get; set; }
+        }
+
+        public class Provincia
+        {
+            [JsonPropertyName("id")]
+            public string Id { get; set; }
+
+            [JsonPropertyName("nombre")]
+            public string Nombre { get; set; }
+        }
+
+        public class ProvinciasArgentina
+        {
+            [JsonPropertyName("cantidad")]
+            public int Cantidad { get; set; }
+
+            [JsonPropertyName("inicio")]
+            public int Inicio { get; set; }
+
+            [JsonPropertyName("parametros")]
+            public Parametros Parametros { get; set; }
+
+            [JsonPropertyName("provincias")]
+            public List<Provincia> Provincias { get; set; }
+
+            [JsonPropertyName("total")]
+            public int Total { get; set; }
+        }*/
     }
 }

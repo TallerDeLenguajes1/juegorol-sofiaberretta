@@ -13,7 +13,7 @@ namespace Juego_rol
     {
         static Random random = new Random();
         int izquierdo, derecho, contadorAtaques;
-        List<Personaje> competidores = new List<Personaje>();
+        List<Personaje> competidores; // = new List<Personaje>();
         public Ventana_batallas()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace Juego_rol
 
             //sonido de inicio
             SoundPlayer sonidoInicio = new SoundPlayer();
-            sonidoInicio.SoundLocation = "D:/Descargas/efectoEntrada.wav"; // ToDo: cambiar la direccion del archivo a relativa
+            sonidoInicio.SoundLocation = "efectoEntrada.wav"; 
             sonidoInicio.Play();
 
             //oculto los botones
@@ -39,7 +39,7 @@ namespace Juego_rol
         {
             //sonido de que empieza pelea
             SoundPlayer sonidoInicio = new SoundPlayer();
-            sonidoInicio.SoundLocation = "D:/Descargas/efectoInicioBatalla.wav"; // ToDo: cambiar la direccion del archivo a relativa
+            sonidoInicio.SoundLocation = "efectoInicioBatalla.wav"; 
             sonidoInicio.Play();
 
             botonPelea.Hide();
@@ -68,6 +68,7 @@ namespace Juego_rol
             lblDestrezaIzq.Text = "Destreza: " + competidores[izquierdo].Destreza.ToString();
             lblArmaduraIzq.Text = "Armadura: " + competidores[izquierdo].Armadura.ToString();
             lblFuerzaIzq.Text = "Fuerza: " + competidores[izquierdo].Fuerza.ToString();
+            lblNivelIzq.Text = "Nivel " + competidores[izquierdo].Nivel.ToString();
             mostrarImagenIzq(competidores[izquierdo]);
 
             //Derecho
@@ -78,6 +79,7 @@ namespace Juego_rol
             lblDestrezaDer.Text = "Destreza: " + competidores[derecho].Destreza.ToString();
             lblArmaduraDer.Text = "Armadura: " + competidores[derecho].Armadura.ToString();
             lblFuerzaDer.Text = "Fuerza: " + competidores[derecho].Fuerza.ToString();
+            lblNivelDer.Text = "Nivel " + competidores[derecho].Nivel.ToString();
             mostrarImagenDer(competidores[derecho]);
 
         }
@@ -182,12 +184,14 @@ namespace Juego_rol
             if(competidores[izquierdo].Salud < 0)
             {
                 chequeoGanador(competidores);
-                competidores[izquierdo].Salud = 0;
+                //ToDo: error de asignacion de la vida a 0
+                //competidores[izquierdo].Salud = 0;
             }
             else if(competidores[derecho].Salud < 0)
             {
                 chequeoGanador(competidores);
-                competidores[derecho].Salud = 0;
+                //ToDo: error de asignacion de la vida a 0
+                //competidores[derecho].Salud = 0;
             }
 
             lblVidaIzq.Text = "Vida: " + competidores[izquierdo].Salud.ToString();
@@ -211,7 +215,8 @@ namespace Juego_rol
         private void asignaPremioGanador(Personaje ganador)
         {
             ganador.Salud = 100;
-            int opcion = random.Next(0, 5);
+            ganador.Nivel += 1;
+            int opcion = random.Next(0, 4);
             switch (opcion)
             {
                 case 0:
@@ -224,9 +229,6 @@ namespace Juego_rol
                     ganador.Fuerza += 3;
                     break;
                 case 3:
-                    ganador.Nivel += 1;
-                    break;
-                case 4:
                     ganador.Velocidad += 3;
                     break;
             }
@@ -317,6 +319,15 @@ namespace Juego_rol
             }
         }
 
-        
+        /*public static void cambiarFondo(string provinciaElegida)
+        {
+            switch (provinciaElegida)
+            {
+                case "Predeterminado":
+                    BackgroundImage = Image.FromFile("Buenos_Aires.jpg");
+                    break;
+
+            }
+        }*/
     }
 }

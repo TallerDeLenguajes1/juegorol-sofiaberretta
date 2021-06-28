@@ -54,6 +54,7 @@ namespace Juego_rol
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.comboBoxProvincias = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonaje)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,7 +120,7 @@ namespace Juego_rol
             // 
             this.button1.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.button1.ForeColor = System.Drawing.Color.Gold;
-            this.button1.Location = new System.Drawing.Point(499, 435);
+            this.button1.Location = new System.Drawing.Point(497, 389);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 47);
             this.button1.TabIndex = 6;
@@ -335,7 +336,7 @@ namespace Juego_rol
             // 
             this.button2.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.button2.ForeColor = System.Drawing.Color.Gold;
-            this.button2.Location = new System.Drawing.Point(393, 435);
+            this.button2.Location = new System.Drawing.Point(391, 389);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 47);
             this.button2.TabIndex = 25;
@@ -343,12 +344,22 @@ namespace Juego_rol
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // comboBoxProvincias
+            // 
+            this.comboBoxProvincias.FormattingEnabled = true;
+            this.comboBoxProvincias.Location = new System.Drawing.Point(391, 450);
+            this.comboBoxProvincias.Name = "comboBoxProvincias";
+            this.comboBoxProvincias.Size = new System.Drawing.Size(223, 23);
+            this.comboBoxProvincias.TabIndex = 26;
+            this.comboBoxProvincias.Text = "Elegir mapa";
+            // 
             // Ventana_mostrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(653, 494);
+            this.Controls.Add(this.comboBoxProvincias);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -408,5 +419,6 @@ namespace Juego_rol
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboBoxProvincias;
     }
 }

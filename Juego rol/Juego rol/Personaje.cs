@@ -21,7 +21,6 @@ namespace Juego_rol
         arreglarArmadura,
         superVelocidad
     }
-
     */
     public class Personaje
     {
