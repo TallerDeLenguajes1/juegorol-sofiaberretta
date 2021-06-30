@@ -10,4 +10,4 @@ Finalmente, queda un solo jugador en pie el cual es coronado como ganador. :tw-2
 
 
 ------------
-:tw-1f4dd:Autor: Ana Sofia Berretta Gali &copy;
+:green_book: Alumna: Ana Sofia Berretta Gali &copy;
