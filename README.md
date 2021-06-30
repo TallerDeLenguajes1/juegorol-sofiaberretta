@@ -1,4 +1,4 @@
-# :fa-gamepad: Juego de Rol 
+# :game_die: Juego de Rol 
 Este proyecto consiste en un juego de batallas realizado con Windows Forms y con una API de provincias Argentinas utilizada para seleccionar el fondo de la competencia al momento de pelear.
 
 ## :question: Como jugar? 
