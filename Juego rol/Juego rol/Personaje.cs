@@ -13,23 +13,14 @@ namespace Juego_rol
         Orco
     }
 
-    /*
-    public enum poderEspecial
-    {
-        curarse,
-        superGolpe,
-        arreglarArmadura,
-        superVelocidad
-    }
-    */
     public class Personaje
     {
         //Datos
         private tipoDePersonaje tipo;
         private string nombre, apodo;
         private DateTime fechaNac;
-        private int edad, salud;
-        //private poderEspecial poder;
+        private int edad;
+        private float salud;
 
         //Caracteristicas
         private int velocidad, destreza, fuerza, nivel, armadura;
@@ -46,7 +37,7 @@ namespace Juego_rol
         public string Apodo { get => apodo; set => apodo = value; }
         public DateTime FechaNac { get => fechaNac; set => fechaNac = value; }
         public int Edad { get => edad; set => edad = value; }
-        public int Salud { get => salud; set => salud = value; }
+        public float Salud{ get => salud; set => salud = value; }
         public int Velocidad { get => velocidad; set => velocidad = value; }
         public int Destreza { get => destreza; set => destreza = value; }
         public int Fuerza { get => fuerza; set => fuerza = value; }

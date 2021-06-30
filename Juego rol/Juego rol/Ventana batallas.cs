@@ -52,11 +52,12 @@ namespace Juego_rol
 
         public void muestraDatosCompetidores(List <Personaje> competidores)
         {
-            btnAtaqueDer.Enabled = true;
+            btnAtaqueDer.Enabled = false;
             btnAtaqueIzq.Enabled = true;
             lblResultadoDer.Hide();
             lblResultadoIzq.Hide();
             botonSiguiente.Hide();
+
             //Genero valores para que elija dos personajes randoms para pelear
             generarPersonajesAleatorios();
 
@@ -91,7 +92,7 @@ namespace Juego_rol
             btnAtaqueDer.Enabled = true; 
             btnAtaqueIzq.Enabled = false;
             actualizarDatos(competidores);
-            chequeoGanador(competidores);
+            chequeoResultados(competidores);
         }
 
         private void btnAtaqueDer_Click(object sender, EventArgs e)
@@ -101,12 +102,12 @@ namespace Juego_rol
             btnAtaqueIzq.Enabled = true;
             actualizarDatos(competidores);
             contadorAtaques++;
-            chequeoGanador(competidores);
+            chequeoResultados(competidores);
         }
 
-        private void chequeoGanador(List<Personaje> competidores)
+        private void chequeoResultados(List<Personaje> competidores)
         {
-            if((competidores[derecho].Salud < 0) || (contadorAtaques == 3 && competidores[izquierdo].Salud > competidores[derecho].Salud))
+            if((competidores[derecho].Salud == 0) || (contadorAtaques == 3 && competidores[izquierdo].Salud > competidores[derecho].Salud))
             {
                 lblResultadoIzq.Text = "GANADOR";
                 lblResultadoDer.Text = "PERDEDOR";
@@ -120,9 +121,11 @@ namespace Juego_rol
 
                 contadorAtaques = 0;
 
-                botonSiguiente.Show();
+                chequeoGanadorFinal();
+                //botonSiguiente.Show();
 
-            } else if ((competidores[izquierdo].Salud < 0) || (contadorAtaques == 3 && competidores[derecho].Salud > competidores[izquierdo].Salud))
+            }
+            else if ((competidores[izquierdo].Salud == 0) || (contadorAtaques == 3 && competidores[derecho].Salud > competidores[izquierdo].Salud))
             {
                 lblResultadoIzq.Text = "PERDEDOR";
                 lblResultadoDer.Text = "GANADOR";
@@ -136,9 +139,11 @@ namespace Juego_rol
 
                 contadorAtaques = 0;
 
-                botonSiguiente.Show();
+                chequeoGanadorFinal();
+                //botonSiguiente.Show();
 
-            } else if (contadorAtaques == 3 && competidores[derecho].Salud == competidores[izquierdo].Salud)
+            }
+            else if (contadorAtaques == 3 && competidores[derecho].Salud == competidores[izquierdo].Salud)
             {
                 lblResultadoIzq.Text = "EMPATE";
                 lblResultadoDer.Text = "EMPATE";
@@ -149,12 +154,13 @@ namespace Juego_rol
 
                 contadorAtaques = 0;
 
-                botonSiguiente.Show();
+                chequeoGanadorFinal();
+                //botonSiguiente.Show();
             }
 
         }
 
-        private void chequeoCantidadCompetidores()
+        private void chequeoGanadorFinal()
         {
             if (competidores.Count == 1)
             {
@@ -164,7 +170,7 @@ namespace Juego_rol
             }
             else
             {
-                muestraDatosCompetidores(competidores);
+                botonSiguiente.Show();
             }
             
         }
@@ -181,19 +187,6 @@ namespace Juego_rol
 
         private void actualizarDatos(List<Personaje> competidores)
         {
-            if(competidores[izquierdo].Salud < 0)
-            {
-                chequeoGanador(competidores);
-                //ToDo: error de asignacion de la vida a 0
-                //competidores[izquierdo].Salud = 0;
-            }
-            else if(competidores[derecho].Salud < 0)
-            {
-                chequeoGanador(competidores);
-                //ToDo: error de asignacion de la vida a 0
-                //competidores[derecho].Salud = 0;
-            }
-
             lblVidaIzq.Text = "Vida: " + competidores[izquierdo].Salud.ToString();
             lblVidaDer.Text = "Vida: " + competidores[derecho].Salud.ToString();
         }
@@ -209,6 +202,10 @@ namespace Juego_rol
             danioProvocado = ((valorAtaque * efectividadDisparo) - poderDefensa) / 5000;
 
             enemigo.Salud -= danioProvocado;
+            if(enemigo.Salud < 0)
+            {
+                enemigo.Salud = 0;
+            }
 
         }
 
@@ -252,7 +249,8 @@ namespace Juego_rol
 
         private void botonSiguiente_Click(object sender, EventArgs e)
         {
-            chequeoCantidadCompetidores();
+            muestraDatosCompetidores(competidores);
+            imagenVS.Show();
             btnAtaqueDer.Show();
             btnAtaqueIzq.Show();
         }
@@ -319,15 +317,87 @@ namespace Juego_rol
             }
         }
 
-        /*public static void cambiarFondo(string provinciaElegida)
+        public void cambiarFondo(string provinciaElegida)
         {
             switch (provinciaElegida)
             {
-                case "Predeterminado":
-                    BackgroundImage = Image.FromFile("Buenos_Aires.jpg");
+                case "Buenos Aires":
+                    this.BackgroundImage = Image.FromFile("Buenos_Aires.jpg");
                     break;
-
+                case "Ciudad Autónoma de Buenos Aires":
+                    this.BackgroundImage = Image.FromFile("CABA.jpg");
+                    break;
+                case "Misiones":
+                    this.BackgroundImage = Image.FromFile("Misiones.jpg");
+                    break;
+                case "San Luis":
+                    this.BackgroundImage = Image.FromFile("San_Luis.jpg");
+                    break;
+                case "San Juan":
+                    this.BackgroundImage = Image.FromFile("San_Juan.jpg");
+                    break;
+                case "Entre Ríos":
+                    this.BackgroundImage = Image.FromFile("Entre_Rios.jpg");
+                    break;
+                case "Santa Cruz":
+                    this.BackgroundImage = Image.FromFile("Santa_Cruz.jpg");
+                    break;
+                case "Río Negro":
+                    this.BackgroundImage = Image.FromFile("Rio_Negro.jpg");
+                    break;
+                case "Chubut":
+                    this.BackgroundImage = Image.FromFile("Chubut.jpg");
+                    break;
+                case "Córdoba":
+                    this.BackgroundImage = Image.FromFile("Cordoba.jpg");
+                    break;
+                case "Mendoza":
+                    this.BackgroundImage = Image.FromFile("Mendoza.jpg");
+                    break;
+                case "La Rioja":
+                    this.BackgroundImage = Image.FromFile("La_Rioja.jpg");
+                    break;
+                case "Catamarca":
+                    this.BackgroundImage = Image.FromFile("Catamarca.jpg");
+                    break;
+                case "La Pampa":
+                    this.BackgroundImage = Image.FromFile("La_Pampa.jpg");
+                    break;
+                case "Santiago del Estero":
+                    this.BackgroundImage = Image.FromFile("Sgo_del_Estero.jpg");
+                    break;
+                case "Corrientes":
+                    this.BackgroundImage = Image.FromFile("Corrientes.jpg");
+                    break;
+                case "Santa Fe":
+                    this.BackgroundImage = Image.FromFile("Santa_Fe.jpeg");
+                    break;
+                case "Tucumán":
+                    this.BackgroundImage = Image.FromFile("Tucuman.jpg");
+                    break;
+                case "Neuquén":
+                    this.BackgroundImage = Image.FromFile("Neuquen.jpg");
+                    break;
+                case "Chaco":
+                    this.BackgroundImage = Image.FromFile("Chaco.jpg");
+                    break;
+                case "Formosa":
+                    this.BackgroundImage = Image.FromFile("Formosa.jpg");
+                    break;
+                case "Jujuy":
+                    this.BackgroundImage = Image.FromFile("Jujuy.jpg");
+                    break;
+                case "Tierra del Fuego, Antártida e Islas del Atlántico":
+                    this.BackgroundImage = Image.FromFile("Tierra_del_Fuego.jpg");
+                    break;
+                case "Salta":
+                    this.BackgroundImage = Image.FromFile("Salta.jpg");
+                    break;
+                case "Predeterminado":
+                    this.BackgroundImage = Image.FromFile("Fondo.png");
+                    break;
             }
-        }*/
+                  
+        }
     }
 }

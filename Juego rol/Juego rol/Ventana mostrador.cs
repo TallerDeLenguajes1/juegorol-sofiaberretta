@@ -18,7 +18,15 @@ namespace Juego_rol
         public Ventana_mostrador(Personaje personaje)
         {
             InitializeComponent();
-            //inicializarComboBox();
+            inicializarComboBox();
+            if (formCrearPersonaje.listaPersonajes.Count < 2)
+            {
+                comboBoxProvincias.Hide();
+            }
+            else
+            {
+                comboBoxProvincias.Show();
+            }
             mostrarPersonaje(personaje);
         }
 
@@ -81,19 +89,28 @@ namespace Juego_rol
             if(formCrearPersonaje.listaPersonajes.Count < 2)
             {
                 MessageBox.Show("Debe tener al menos 2 personajes creados.");
+                Close();
             }
             else
             {
-                //Ventana_batallas.cambiarFondo(comboBoxProvincias.SelectedItem.ToString());
-                Ventana_batallas ventanaBatallaNueva = new Ventana_batallas();
-                ventanaBatallaNueva.Show();
+                if (comboBoxProvincias.SelectedItem == null)
+                {
+                    MessageBox.Show("Debe elegir un mapa.");
+                }
+                else
+                {
+                    Ventana_batallas ventanaBatallaNueva = new Ventana_batallas();
+                    ventanaBatallaNueva.cambiarFondo(comboBoxProvincias.SelectedItem.ToString());
+                    ventanaBatallaNueva.Show();
+                    Close();
+                }
+                
             }
 
-            Close();
         }
 
-        /*
-        -------------------------parte de API----------------------------------
+        
+        //-------------------------parte de API----------------------------------
 
         private void inicializarComboBox()
         {
@@ -106,7 +123,7 @@ namespace Juego_rol
             }
 
             comboBoxProvincias.Items.Add("Predeterminado");
-
+            
         }
 
 
@@ -175,6 +192,6 @@ namespace Juego_rol
 
             [JsonPropertyName("total")]
             public int Total { get; set; }
-        }*/
+        }
     }
 }

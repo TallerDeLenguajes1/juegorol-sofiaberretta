@@ -158,10 +158,11 @@ namespace Juego_rol
             // 
             this.lblFuerzaIzq.AutoSize = true;
             this.lblFuerzaIzq.BackColor = System.Drawing.Color.Transparent;
+            this.lblFuerzaIzq.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblFuerzaIzq.ForeColor = System.Drawing.Color.Orange;
-            this.lblFuerzaIzq.Location = new System.Drawing.Point(12, 333);
+            this.lblFuerzaIzq.Location = new System.Drawing.Point(12, 330);
             this.lblFuerzaIzq.Name = "lblFuerzaIzq";
-            this.lblFuerzaIzq.Size = new System.Drawing.Size(38, 15);
+            this.lblFuerzaIzq.Size = new System.Drawing.Size(51, 20);
             this.lblFuerzaIzq.TabIndex = 9;
             this.lblFuerzaIzq.Text = "label3";
             // 
@@ -169,10 +170,11 @@ namespace Juego_rol
             // 
             this.lblDestrezaIzq.AutoSize = true;
             this.lblDestrezaIzq.BackColor = System.Drawing.Color.Transparent;
+            this.lblDestrezaIzq.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblDestrezaIzq.ForeColor = System.Drawing.Color.Orange;
-            this.lblDestrezaIzq.Location = new System.Drawing.Point(138, 333);
+            this.lblDestrezaIzq.Location = new System.Drawing.Point(138, 330);
             this.lblDestrezaIzq.Name = "lblDestrezaIzq";
-            this.lblDestrezaIzq.Size = new System.Drawing.Size(38, 15);
+            this.lblDestrezaIzq.Size = new System.Drawing.Size(51, 20);
             this.lblDestrezaIzq.TabIndex = 10;
             this.lblDestrezaIzq.Text = "label4";
             // 
@@ -180,10 +182,11 @@ namespace Juego_rol
             // 
             this.lblVelocidadIzq.AutoSize = true;
             this.lblVelocidadIzq.BackColor = System.Drawing.Color.Transparent;
+            this.lblVelocidadIzq.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblVelocidadIzq.ForeColor = System.Drawing.Color.Orange;
-            this.lblVelocidadIzq.Location = new System.Drawing.Point(12, 359);
+            this.lblVelocidadIzq.Location = new System.Drawing.Point(12, 356);
             this.lblVelocidadIzq.Name = "lblVelocidadIzq";
-            this.lblVelocidadIzq.Size = new System.Drawing.Size(38, 15);
+            this.lblVelocidadIzq.Size = new System.Drawing.Size(51, 20);
             this.lblVelocidadIzq.TabIndex = 11;
             this.lblVelocidadIzq.Text = "label5";
             // 
@@ -191,10 +194,11 @@ namespace Juego_rol
             // 
             this.lblArmaduraIzq.AutoSize = true;
             this.lblArmaduraIzq.BackColor = System.Drawing.Color.Transparent;
+            this.lblArmaduraIzq.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblArmaduraIzq.ForeColor = System.Drawing.Color.Orange;
-            this.lblArmaduraIzq.Location = new System.Drawing.Point(138, 359);
+            this.lblArmaduraIzq.Location = new System.Drawing.Point(138, 356);
             this.lblArmaduraIzq.Name = "lblArmaduraIzq";
-            this.lblArmaduraIzq.Size = new System.Drawing.Size(38, 15);
+            this.lblArmaduraIzq.Size = new System.Drawing.Size(51, 20);
             this.lblArmaduraIzq.TabIndex = 12;
             this.lblArmaduraIzq.Text = "label6";
             // 
@@ -202,10 +206,11 @@ namespace Juego_rol
             // 
             this.lblArmaduraDer.AutoSize = true;
             this.lblArmaduraDer.BackColor = System.Drawing.Color.Transparent;
+            this.lblArmaduraDer.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblArmaduraDer.ForeColor = System.Drawing.Color.Orange;
-            this.lblArmaduraDer.Location = new System.Drawing.Point(627, 359);
+            this.lblArmaduraDer.Location = new System.Drawing.Point(613, 357);
             this.lblArmaduraDer.Name = "lblArmaduraDer";
-            this.lblArmaduraDer.Size = new System.Drawing.Size(38, 15);
+            this.lblArmaduraDer.Size = new System.Drawing.Size(51, 20);
             this.lblArmaduraDer.TabIndex = 16;
             this.lblArmaduraDer.Text = "label7";
             // 
@@ -213,10 +218,11 @@ namespace Juego_rol
             // 
             this.lblVelocidadDer.AutoSize = true;
             this.lblVelocidadDer.BackColor = System.Drawing.Color.Transparent;
+            this.lblVelocidadDer.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblVelocidadDer.ForeColor = System.Drawing.Color.Orange;
-            this.lblVelocidadDer.Location = new System.Drawing.Point(519, 359);
+            this.lblVelocidadDer.Location = new System.Drawing.Point(505, 357);
             this.lblVelocidadDer.Name = "lblVelocidadDer";
-            this.lblVelocidadDer.Size = new System.Drawing.Size(38, 15);
+            this.lblVelocidadDer.Size = new System.Drawing.Size(51, 20);
             this.lblVelocidadDer.TabIndex = 15;
             this.lblVelocidadDer.Text = "label8";
             // 
@@ -224,10 +230,11 @@ namespace Juego_rol
             // 
             this.lblDestrezaDer.AutoSize = true;
             this.lblDestrezaDer.BackColor = System.Drawing.Color.Transparent;
+            this.lblDestrezaDer.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblDestrezaDer.ForeColor = System.Drawing.Color.Orange;
-            this.lblDestrezaDer.Location = new System.Drawing.Point(627, 333);
+            this.lblDestrezaDer.Location = new System.Drawing.Point(613, 331);
             this.lblDestrezaDer.Name = "lblDestrezaDer";
-            this.lblDestrezaDer.Size = new System.Drawing.Size(38, 15);
+            this.lblDestrezaDer.Size = new System.Drawing.Size(51, 20);
             this.lblDestrezaDer.TabIndex = 14;
             this.lblDestrezaDer.Text = "label9";
             // 
@@ -235,10 +242,11 @@ namespace Juego_rol
             // 
             this.lblFuerzaDer.AutoSize = true;
             this.lblFuerzaDer.BackColor = System.Drawing.Color.Transparent;
+            this.lblFuerzaDer.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblFuerzaDer.ForeColor = System.Drawing.Color.Orange;
-            this.lblFuerzaDer.Location = new System.Drawing.Point(519, 333);
+            this.lblFuerzaDer.Location = new System.Drawing.Point(505, 331);
             this.lblFuerzaDer.Name = "lblFuerzaDer";
-            this.lblFuerzaDer.Size = new System.Drawing.Size(44, 15);
+            this.lblFuerzaDer.Size = new System.Drawing.Size(60, 20);
             this.lblFuerzaDer.TabIndex = 13;
             this.lblFuerzaDer.Text = "label10";
             // 
@@ -246,11 +254,11 @@ namespace Juego_rol
             // 
             this.lblApodoDer.AutoSize = true;
             this.lblApodoDer.BackColor = System.Drawing.Color.Transparent;
-            this.lblApodoDer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblApodoDer.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblApodoDer.ForeColor = System.Drawing.Color.Orange;
             this.lblApodoDer.Location = new System.Drawing.Point(601, 15);
             this.lblApodoDer.Name = "lblApodoDer";
-            this.lblApodoDer.Size = new System.Drawing.Size(52, 21);
+            this.lblApodoDer.Size = new System.Drawing.Size(55, 21);
             this.lblApodoDer.TabIndex = 18;
             this.lblApodoDer.Text = "label1";
             // 
@@ -258,11 +266,11 @@ namespace Juego_rol
             // 
             this.lblApodoIzq.AutoSize = true;
             this.lblApodoIzq.BackColor = System.Drawing.Color.Transparent;
-            this.lblApodoIzq.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblApodoIzq.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblApodoIzq.ForeColor = System.Drawing.Color.Orange;
             this.lblApodoIzq.Location = new System.Drawing.Point(138, 14);
             this.lblApodoIzq.Name = "lblApodoIzq";
-            this.lblApodoIzq.Size = new System.Drawing.Size(52, 21);
+            this.lblApodoIzq.Size = new System.Drawing.Size(55, 21);
             this.lblApodoIzq.TabIndex = 17;
             this.lblApodoIzq.Text = "label2";
             // 
@@ -270,11 +278,11 @@ namespace Juego_rol
             // 
             this.lblVidaIzq.AutoSize = true;
             this.lblVidaIzq.BackColor = System.Drawing.Color.Transparent;
-            this.lblVidaIzq.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblVidaIzq.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblVidaIzq.ForeColor = System.Drawing.Color.Red;
-            this.lblVidaIzq.Location = new System.Drawing.Point(216, 251);
+            this.lblVidaIzq.Location = new System.Drawing.Point(216, 257);
             this.lblVidaIzq.Name = "lblVidaIzq";
-            this.lblVidaIzq.Size = new System.Drawing.Size(78, 32);
+            this.lblVidaIzq.Size = new System.Drawing.Size(81, 32);
             this.lblVidaIzq.TabIndex = 19;
             this.lblVidaIzq.Text = "label1";
             // 
@@ -282,11 +290,11 @@ namespace Juego_rol
             // 
             this.lblVidaDer.AutoSize = true;
             this.lblVidaDer.BackColor = System.Drawing.Color.Transparent;
-            this.lblVidaDer.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblVidaDer.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblVidaDer.ForeColor = System.Drawing.Color.Red;
-            this.lblVidaDer.Location = new System.Drawing.Point(440, 251);
+            this.lblVidaDer.Location = new System.Drawing.Point(440, 257);
             this.lblVidaDer.Name = "lblVidaDer";
-            this.lblVidaDer.Size = new System.Drawing.Size(78, 32);
+            this.lblVidaDer.Size = new System.Drawing.Size(83, 32);
             this.lblVidaDer.TabIndex = 20;
             this.lblVidaDer.Text = "label2";
             // 
@@ -331,10 +339,11 @@ namespace Juego_rol
             // 
             this.lblNivelDer.AutoSize = true;
             this.lblNivelDer.BackColor = System.Drawing.Color.Transparent;
+            this.lblNivelDer.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblNivelDer.ForeColor = System.Drawing.Color.Orange;
             this.lblNivelDer.Location = new System.Drawing.Point(460, 236);
             this.lblNivelDer.Name = "lblNivelDer";
-            this.lblNivelDer.Size = new System.Drawing.Size(44, 15);
+            this.lblNivelDer.Size = new System.Drawing.Size(64, 21);
             this.lblNivelDer.TabIndex = 24;
             this.lblNivelDer.Text = "label12";
             // 
@@ -342,10 +351,11 @@ namespace Juego_rol
             // 
             this.lblNivelIzq.AutoSize = true;
             this.lblNivelIzq.BackColor = System.Drawing.Color.Transparent;
+            this.lblNivelIzq.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblNivelIzq.ForeColor = System.Drawing.Color.Orange;
             this.lblNivelIzq.Location = new System.Drawing.Point(234, 236);
             this.lblNivelIzq.Name = "lblNivelIzq";
-            this.lblNivelIzq.Size = new System.Drawing.Size(44, 15);
+            this.lblNivelIzq.Size = new System.Drawing.Size(64, 21);
             this.lblNivelIzq.TabIndex = 25;
             this.lblNivelIzq.Text = "label11";
             // 
@@ -353,8 +363,8 @@ namespace Juego_rol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(712, 383);
+            this.BackgroundImage = global::Juego_rol.Properties.Resources.Fondo;
+            this.ClientSize = new System.Drawing.Size(711, 383);
             this.Controls.Add(this.lblNivelIzq);
             this.Controls.Add(this.lblNivelDer);
             this.Controls.Add(this.botonSiguiente);
