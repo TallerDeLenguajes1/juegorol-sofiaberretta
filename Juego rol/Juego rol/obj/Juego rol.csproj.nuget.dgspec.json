@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Facultad\\2021\\Taller de Lenguajes I\\juegorol-sofiaberretta\\Juego rol\\Juego rol\\Juego rol.csproj": {}
+    "D:\\Facultad\\2021\\Taller de Lenguajes I\\Segunda mitad\\juegorol-sofiaberretta\\Juego rol\\Juego rol\\Juego rol.csproj": {}
   },
   "projects": {
-    "D:\\Facultad\\2021\\Taller de Lenguajes I\\juegorol-sofiaberretta\\Juego rol\\Juego rol\\Juego rol.csproj": {
+    "D:\\Facultad\\2021\\Taller de Lenguajes I\\Segunda mitad\\juegorol-sofiaberretta\\Juego rol\\Juego rol\\Juego rol.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Facultad\\2021\\Taller de Lenguajes I\\juegorol-sofiaberretta\\Juego rol\\Juego rol\\Juego rol.csproj",
+        "projectUniqueName": "D:\\Facultad\\2021\\Taller de Lenguajes I\\Segunda mitad\\juegorol-sofiaberretta\\Juego rol\\Juego rol\\Juego rol.csproj",
         "projectName": "Juego rol",
-        "projectPath": "D:\\Facultad\\2021\\Taller de Lenguajes I\\juegorol-sofiaberretta\\Juego rol\\Juego rol\\Juego rol.csproj",
+        "projectPath": "D:\\Facultad\\2021\\Taller de Lenguajes I\\Segunda mitad\\juegorol-sofiaberretta\\Juego rol\\Juego rol\\Juego rol.csproj",
         "packagesPath": "C:\\Users\\anita\\.nuget\\packages\\",
-        "outputPath": "D:\\Facultad\\2021\\Taller de Lenguajes I\\juegorol-sofiaberretta\\Juego rol\\Juego rol\\obj\\",
+        "outputPath": "D:\\Facultad\\2021\\Taller de Lenguajes I\\Segunda mitad\\juegorol-sofiaberretta\\Juego rol\\Juego rol\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\anita\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -57,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

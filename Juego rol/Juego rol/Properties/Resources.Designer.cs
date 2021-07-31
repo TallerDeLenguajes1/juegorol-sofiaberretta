@@ -63,6 +63,16 @@ namespace Juego_rol.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bosque {
+            get {
+                object obj = ResourceManager.GetObject("Bosque", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap elfo {
             get {
                 object obj = ResourceManager.GetObject("elfo", resourceCulture);

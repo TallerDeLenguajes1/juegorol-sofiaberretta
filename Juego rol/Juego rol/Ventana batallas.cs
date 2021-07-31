@@ -6,6 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Media;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.IO;
 
 namespace Juego_rol
 {
@@ -165,6 +168,7 @@ namespace Juego_rol
             if (competidores.Count == 1)
             {
                 MessageBox.Show(competidores[0].Apodo + " " + competidores[0].Nombre + " ha ganado!", "VICTORIA");
+                guardarGanadorJson(competidores[0]);
                 Close();
                 competidores.Clear();
             }
@@ -253,6 +257,57 @@ namespace Juego_rol
             imagenVS.Show();
             btnAtaqueDer.Show();
             btnAtaqueIzq.Show();
+        }
+
+
+        private void guardarGanadorJson(Personaje ganador)
+        {
+            List<Personaje> listaGanadores = leerJson();
+
+            int i;
+            for (i = 0; i < listaGanadores.Count; i++)
+            {
+                if (listaGanadores[i].Nivel < ganador.Nivel)
+                {
+                    listaGanadores.Insert(i, ganador);
+                }
+            }
+
+            if (listaGanadores.Count > 10)
+            {
+                listaGanadores.RemoveAt(10);
+            }
+
+            
+            string ganadoresStr = JsonSerializer.Serialize(ganador);
+            FileStream archivo = new FileStream("Ganadores.json", FileMode.Create);
+            using (StreamWriter strWriter = new StreamWriter(archivo))
+            {
+                strWriter.WriteLine("{0}", ganadoresStr);
+                strWriter.Close();
+            }
+            
+        }
+
+        public static List<Personaje> leerJson()
+        {
+            List<Personaje> listaGanadores;
+            string rutaArchivo = @"Ganadores.json";
+
+            try
+            {
+                using (StreamReader leerJson = File.OpenText(rutaArchivo))
+                {
+                    var Json = leerJson.ReadToEnd();
+                    listaGanadores = JsonSerializer.Deserialize<List<Personaje>>(Json);
+                }
+            }
+            catch (FileNotFoundException)
+            {
+                listaGanadores = new List<Personaje>();
+            }
+
+            return listaGanadores;
         }
 
 

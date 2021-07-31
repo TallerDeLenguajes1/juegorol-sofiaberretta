@@ -139,6 +139,11 @@ namespace Juego_rol
             txtApodo.Text = "";
             dTPFechaNac.Value = DateTime.Now;
         }
-        
+
+        private void btMostrarRanking_Click(object sender, EventArgs e)
+        {
+            Ventana_ranking ventanaRanking = new Ventana_ranking();
+            ventanaRanking.Show();
+        }
     }
 }

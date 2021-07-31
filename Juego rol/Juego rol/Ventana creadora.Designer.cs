@@ -41,6 +41,7 @@ namespace Juego_rol
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApodo = new System.Windows.Forms.TextBox();
             this.comboBoxTipo = new System.Windows.Forms.ComboBox();
+            this.btMostrarRanking = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelNombre
@@ -166,6 +167,19 @@ namespace Juego_rol
             this.comboBoxTipo.Size = new System.Drawing.Size(213, 23);
             this.comboBoxTipo.TabIndex = 11;
             // 
+            // btMostrarRanking
+            // 
+            this.btMostrarRanking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(168)))), ((int)(((byte)(9)))));
+            this.btMostrarRanking.Font = new System.Drawing.Font("Centaur", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btMostrarRanking.ForeColor = System.Drawing.Color.White;
+            this.btMostrarRanking.Location = new System.Drawing.Point(227, 306);
+            this.btMostrarRanking.Name = "btMostrarRanking";
+            this.btMostrarRanking.Size = new System.Drawing.Size(112, 24);
+            this.btMostrarRanking.TabIndex = 12;
+            this.btMostrarRanking.Text = "Ranking";
+            this.btMostrarRanking.UseVisualStyleBackColor = false;
+            this.btMostrarRanking.Click += new System.EventHandler(this.btMostrarRanking_Click);
+            // 
             // formCrearPersonaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -173,6 +187,7 @@ namespace Juego_rol
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(341, 342);
+            this.Controls.Add(this.btMostrarRanking);
             this.Controls.Add(this.comboBoxTipo);
             this.Controls.Add(this.txtApodo);
             this.Controls.Add(this.txtNombre);
@@ -206,6 +221,7 @@ namespace Juego_rol
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApodo;
         private System.Windows.Forms.ComboBox comboBoxTipo;
+        private System.Windows.Forms.Button btMostrarRanking;
     }
 }
 

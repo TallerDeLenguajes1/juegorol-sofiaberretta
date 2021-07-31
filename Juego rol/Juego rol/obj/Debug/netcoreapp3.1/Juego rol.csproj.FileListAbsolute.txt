@@ -32,3 +32,22 @@ D:\Facultad\2021\Taller de Lenguajes I\juegorol-sofiaberretta\Juego rol\Juego ro
 D:\Facultad\2021\Taller de Lenguajes I\juegorol-sofiaberretta\Juego rol\Juego rol\obj\Debug\netcoreapp3.1\Juego rol.genruntimeconfig.cache
 D:\Facultad\2021\Taller de Lenguajes I\juegorol-sofiaberretta\Juego rol\Juego rol\obj\Debug\netcoreapp3.1\Juego_rol.Ventana_mostrador.resources
 D:\Facultad\2021\Taller de Lenguajes I\juegorol-sofiaberretta\Juego rol\Juego rol\obj\Debug\netcoreapp3.1\Juego_rol.Ventana_batallas.resources
+D:\Facultad\2021\Taller de Lenguajes I\Segunda mitad\juegorol-sofiaberretta\Juego rol\Juego rol\bin\Debug\netcoreapp3.1\Juego rol.exe
+D:\Facultad\2021\Taller de Lenguajes I\Segunda mitad\juegorol-sofiaberretta\Juego rol\Juego rol\bin\Debug\netcoreapp3.1\Juego rol.deps.json
+D:\Facultad\2021\Taller de Lenguajes I\Segunda mitad\juegorol-sofiaberretta\Juego rol\Juego rol\bin\Debug\netcoreapp3.1\Juego rol.runtimeconfig.json
+D:\Facultad\2021\Taller de Lenguajes I\Segunda mitad\juegorol-sofiaberretta\Juego rol\Juego rol\bin\Debug\netcoreapp3.1\Juego rol.runtimeconfig.dev.json
+D:\Facultad\2021\Taller de Lenguajes I\Segunda mitad\juegorol-sofiaberretta\Juego rol\Juego rol\bin\Debug\netcoreapp3.1\Juego rol.dll
+D:\Facultad\2021\Taller de Lenguajes I\Segunda mitad\juegorol-sofiaberretta\Juego rol\Juego rol\bin\Debug\netcoreapp3.1\Juego rol.pdb
+D:\Facultad\2021\Taller de Lenguajes I\Segunda mitad\juegorol-sofiaberretta\Juego rol\Juego rol\obj\Debug\netcoreapp3.1\Juego rol.csproj.AssemblyReference.cache
+D:\Facultad\2021\Taller de Lenguajes I\Segunda mitad\juegorol-sofiaberretta\Juego rol\Juego rol\obj\Debug\netcoreapp3.1\Juego_rol.Properties.Resources.resources
+D:\Facultad\2021\Taller de Lenguajes I\Segunda mitad\juegorol-sofiaberretta\Juego rol\Juego rol\obj\Debug\netcoreapp3.1\Juego_rol.Ventana_batallas.resources
+D:\Facultad\2021\Taller de Lenguajes I\Segunda mitad\juegorol-sofiaberretta\Juego rol\Juego rol\obj\Debug\netcoreapp3.1\Juego_rol.formCrearPersonaje.resources
+D:\Facultad\2021\Taller de Lenguajes I\Segunda mitad\juegorol-sofiaberretta\Juego rol\Juego rol\obj\Debug\netcoreapp3.1\Juego_rol.Ventana_mostrador.resources
+D:\Facultad\2021\Taller de Lenguajes I\Segunda mitad\juegorol-sofiaberretta\Juego rol\Juego rol\obj\Debug\netcoreapp3.1\Juego rol.csproj.GenerateResource.cache
+D:\Facultad\2021\Taller de Lenguajes I\Segunda mitad\juegorol-sofiaberretta\Juego rol\Juego rol\obj\Debug\netcoreapp3.1\Juego rol.AssemblyInfoInputs.cache
+D:\Facultad\2021\Taller de Lenguajes I\Segunda mitad\juegorol-sofiaberretta\Juego rol\Juego rol\obj\Debug\netcoreapp3.1\Juego rol.AssemblyInfo.cs
+D:\Facultad\2021\Taller de Lenguajes I\Segunda mitad\juegorol-sofiaberretta\Juego rol\Juego rol\obj\Debug\netcoreapp3.1\Juego rol.csproj.CoreCompileInputs.cache
+D:\Facultad\2021\Taller de Lenguajes I\Segunda mitad\juegorol-sofiaberretta\Juego rol\Juego rol\obj\Debug\netcoreapp3.1\Juego rol.dll
+D:\Facultad\2021\Taller de Lenguajes I\Segunda mitad\juegorol-sofiaberretta\Juego rol\Juego rol\obj\Debug\netcoreapp3.1\Juego rol.pdb
+D:\Facultad\2021\Taller de Lenguajes I\Segunda mitad\juegorol-sofiaberretta\Juego rol\Juego rol\obj\Debug\netcoreapp3.1\Juego rol.genruntimeconfig.cache
+D:\Facultad\2021\Taller de Lenguajes I\Segunda mitad\juegorol-sofiaberretta\Juego rol\Juego rol\obj\Debug\netcoreapp3.1\Juego_rol.Ventana_ranking.resources
